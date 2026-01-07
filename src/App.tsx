@@ -9,11 +9,34 @@ import Thanks from './components/Thanks'
 import Steps from './components/Steps'
 
 // Hooks
+import { useState } from 'react'
 import { useForm } from './hooks/useForm'
 
+type FormFields = {
+  name: string;
+  email: string;
+  review: string;
+  comment: string;
+}
+
+const formtemplate: FormFields = {
+  name: "",
+  email: "",
+  review: "",
+  comment: ""
+}
+
 function App() {
+  const [data, setData] = useState<FormFields>(formtemplate);
+
+  const updateFieldHandler = (key: string, value: string) => {
+    setData((prev): FormFields => {
+      return { ...prev, [key]: value };
+    });
+  };
+
   const formComponents = [
-    <UserForm />,
+    <UserForm data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewForm />,
     <Thanks />
   ]
