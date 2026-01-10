@@ -1,5 +1,5 @@
 # Multistep Form
-Multistep form being built with:
+Multistep form is being built with:
 
 # React + TypeScript + Vite
 
