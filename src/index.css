@@ -1,15 +1,23 @@
+@import "tailwindcss";
+
 * {
   font-family: "Barlow", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   color: #333;
+} 
+
+body {
+  background-color: #f9fafc;
 }
 
 p {
   color: #777;
 }
 
-body {
-  background-color: #f9fafc;
+/* * {
+  font-family: "Barlow", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+*/
