@@ -3,6 +3,7 @@ import './App.css'
 
 // Components
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
+import { FiSend } from 'react-icons/fi'
 import UserForm from './components/UserForm'
 import ReviewForm from './components/ReviewForm'
 import Thanks from './components/Thanks'
@@ -38,13 +39,14 @@ function App() {
   const formComponents = [
     <UserForm data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewForm data={data} updateFieldHandler={updateFieldHandler} />,
-    <Thanks />
+    <Thanks data={data} />
   ]
 
   const { 
     currentStep,
     currentComponent,
-    changeStep  
+    changeStep, 
+    isLastStep
   } = useForm(formComponents);
 
   return (
@@ -64,12 +66,17 @@ function App() {
                 Voltar
               </span>
             </button>
-            <button type="submit">
-              <span>
-                Avançar
+            {!isLastStep ? (
+              <button type="submit">
+                <span>Avançar</span>
                 <GrFormNext />
-              </span>
-            </button>
+              </button>
+            ) : (
+              <button type="submit">
+                <span>Enviar</span>
+                <FiSend />
+              </button>
+            )}
           </div>
         </form>
       </div>
