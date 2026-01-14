@@ -25,7 +25,7 @@ const UserForm = ({ data, updateFieldHandler }: UserProps) => {
       <div className="flex flex-col mb-4 gap-2.5">
         <label className="font-bold text-[#777] text-[.9rem]" htmlFor="email">Email:</label>
         <input 
-          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0"
+          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0]"
           type="email"
           name="email" 
           id="email" 
