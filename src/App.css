@@ -1,20 +1,20 @@
-.app {
+/* .app {
   padding: 2rem;
-}
+} */
 
 /* Cabeçalho */
-.header {
+/* .header {
   text-align: center;
   margin-bottom: 2rem;
-}
+} */
 
-.header h2 {
+/* .header h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-}
+} */
 
 /* Forms */
-.form-container {
+/* .form-container {
   max-width: 600px;
   margin: 0 auto;
   background-color: #fff;
@@ -25,7 +25,7 @@
 .form-container form {
   max-width: 400px;
   margin: 0 auto;
-}
+} */
 
 .inputs-container {
   min-height: 280px;
