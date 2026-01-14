@@ -17,10 +17,11 @@ type ReviewForm = {
 
 const ReviewForm = ({ data, updateFieldHandler }: ReviewForm) => {
   return (
-    <div className="review-form">
-      <div className="form-control score-container">
-        <label className="radio-container">
-          <input 
+    <div>
+      <div className="flex flex-row gap-8 text-center mb-8">
+        <label className="flex flex-col items-center text-center relative cursor-pointer">
+          <input
+            className="peer opacity-0 absolute top-4.75 left-7.5"
             type="radio" 
             value="unsatisfied" 
             name="review" 
@@ -28,11 +29,12 @@ const ReviewForm = ({ data, updateFieldHandler }: ReviewForm) => {
             checked={data.review === "unsatisfied"}
             onChange={(e) => updateFieldHandler("review", e.target.value)}
           />
-          <BsFillEmojiFrownFill />
-          <p>Insatisfeito</p>
+          <BsFillEmojiFrownFill className="text-[1.6rem] transition duration-300 hover:fill-[#7076f4] peer-checked:fill-[#7076f4]" />
+          <p className='italic font-light text-[.7rem] mt-[.4rem]'>Insatisfeito</p>
         </label>
-        <label className="radio-container">
-          <input 
+        <label className="flex flex-col items-center text-center relative cursor-pointer">
+          <input
+            className="peer opacity-0 absolute top-3.75 left-7.5" 
             type="radio" 
             value="neutral" 
             name="review" 
@@ -40,11 +42,12 @@ const ReviewForm = ({ data, updateFieldHandler }: ReviewForm) => {
             checked={data.review === "neutral"}
             onChange={(e) => updateFieldHandler("review", e.target.value)}
           />
-          <BsFillEmojiNeutralFill />
-          <p>Poderia ser melhor</p>
+          <BsFillEmojiNeutralFill className="text-[1.6rem] transition duration-300 hover:fill-[#7076f4] peer-checked:fill-[#7076f4]" />
+          <p className="italic font-light text-[.7rem] mt-[.4rem]">Poderia ser melhor</p>
         </label>
-        <label className="radio-container">
-          <input 
+        <label className="flex flex-col items-center text-center relative cursor-pointer">
+          <input
+            className="peer opacity-0 absolute top-2 left-4" 
             type="radio" 
             value="satisfied" 
             name="review" 
@@ -52,25 +55,27 @@ const ReviewForm = ({ data, updateFieldHandler }: ReviewForm) => {
             checked={data.review === "satisfied"}
             onChange={(e) => updateFieldHandler("review", e.target.value)} 
           />
-          <BsFillEmojiSmileFill />
-          <p>Satisfeito</p>
+          <BsFillEmojiSmileFill className="text-[1.6rem] transition duration-300 hover:fill-[#7076f4] peer-checked:fill-[#7076f4]" />
+          <p className="italic font-light text-[.7rem] mt-[.4rem]">Satisfeito</p>
         </label>
-        <label className="radio-container">
-          <input 
-          type="radio" 
-          value="very_satisfied" 
-          name="review" 
-          required 
-          checked={data.review === "very_satisfied"}
-          onChange={(e) => updateFieldHandler("review", e.target.value)}
+        <label className="flex flex-col items-center text-center relative cursor-pointer">
+          <input
+            className="peer opacity-0 absolute top-2 left-4" 
+            type="radio" 
+            value="very_satisfied" 
+            name="review" 
+            required 
+            checked={data.review === "very_satisfied"}
+            onChange={(e) => updateFieldHandler("review", e.target.value)}
           />
-          <BsFillEmojiHeartEyesFill />
-          <p>Muito satisfeito</p>
+          <BsFillEmojiHeartEyesFill className="text-[1.6rem] transition duration-300 hover:fill-[#7076f4] peer-checked:fill-[#7076f4]" />
+          <p className="italic font-light text-[.7rem] mt-[.4rem]">Muito satisfeito</p>
         </label>
       </div>
-      <div className="form-control">
-        <label htmlFor="comment">Comentário</label>
+      <div className="flex flex-col gap-2.5">
+        <label className="font-bold text-[#777] text-[.9rem]" htmlFor="comment">Comentário</label>
         <textarea 
+          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0] resize-none h-30 focus:outline-[#7076f4]"
           name="comment" 
           id="comment" 
           placeholder="Conte como foi sua experiência com o produto" 

@@ -9,9 +9,10 @@ type UserProps = {
 const UserForm = ({ data, updateFieldHandler }: UserProps) => {
   return (
     <div>
-      <div className="form-control">
-        <label htmlFor="name">Nome:</label>
-        <input 
+      <div className="flex flex-col mb-4 gap-2.5">
+        <label className="font-bold text-[#777] text-[.9rem]" htmlFor="name">Nome:</label>
+        <input
+          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0]" 
           type="text"
           name="name" 
           id="name" 
@@ -21,9 +22,10 @@ const UserForm = ({ data, updateFieldHandler }: UserProps) => {
           required
         />
       </div>
-      <div className="form-control">
-        <label htmlFor="email">Email:</label>
+      <div className="flex flex-col mb-4 gap-2.5">
+        <label className="font-bold text-[#777] text-[.9rem]" htmlFor="email">Email:</label>
         <input 
+          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0"
           type="email"
           name="email" 
           id="email" 
