@@ -20,7 +20,7 @@ const Steps = ({ currentStep }: stepsProps) => {
         <p>Avaliação</p>
       </div>
 
-      <div className={`flex flex-col justify-center items-center relative text-center bg-white z-10 w-40 p-2 ${currentStep >= 2 ? "font-bold text-[#7076F4]" : ""}`}>
+      <div className={`relative text-center bg-white z-10 w-40 p-2 ${currentStep >= 2 ? "font-bold text-[#7076F4]" : ""}`}>
         <FiSend className="text-2xl mb-1" />
         <p>Envio</p>
       </div>

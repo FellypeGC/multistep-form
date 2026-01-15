@@ -75,7 +75,7 @@ const ReviewForm = ({ data, updateFieldHandler }: ReviewForm) => {
       <div className="flex flex-col gap-2.5">
         <label className="font-bold text-[#777] text-[.9rem]" htmlFor="comment">Comentário</label>
         <textarea 
-          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0] resize-none h-30 focus:outline-[#7076f4]"
+          className="p-[.6rem] border border-gray-200 rounded-[3px] shadow-[rgba(99,99,99,.2)_0_2px_8px_0] h-30 focus:outline-[#7076f4]"
           name="comment" 
           id="comment" 
           placeholder="Conte como foi sua experiência com o produto" 
