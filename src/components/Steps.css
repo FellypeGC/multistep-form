@@ -1,4 +1,4 @@
-/* .steps {
+.steps {
   display: flex;
   gap: 4rem;
   justify-content: center;
@@ -34,6 +34,6 @@
   font-weight: bold;
 }
 
-/* .active > svg {
+.active > svg {
   fill: #7076F4;
-} */
+}
