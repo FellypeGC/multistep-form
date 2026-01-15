@@ -33,20 +33,19 @@ type ThanksProps = {
 
 const Thanks = ({ data }: ThanksProps) => {
   return (
-    <div className="thanks-container">
-      <h2>Falta pouco...</h2>
-      <p>
+    <div className="text-center">
+      <h2 className="mb-4 font-medium">Falta pouco...</h2>
+      <p className="text-[.9rem] mb-2 text-start">
         A sua opinião é muito importante. Em breve você receberá um cupom de 10% de desconto para a sua próxima compra.
       </p>
-      <p>Para concluir sua avaliação, por favor, clique no botão de Enviar abaixo.</p>
-      <h3>Aqui está o resumo da sua avaliação {data.name}:</h3>
-      <p className="review-data">
-        <span>Satisfação com o produto:</span>
-        {emojiData[data.review as keyof typeof emojiData]}
+      <p className="text-[.9rem] mb-2 text-start">Para concluir sua avaliação, por favor, clique no botão de Enviar abaixo.</p>
+      <h3 className="text-left my-4 mx-0">Aqui está o resumo da sua avaliação {data.name}:</h3>
+      <p className="text-left flex items-center font-bold">
+        <span className="font-bold text-[#333]">Satisfação com o produto:</span> {emojiData[data.review as keyof typeof emojiData]}
       </p>
 
-      <p className="review-data">
-        <span>Comentário:</span> {data.comment}
+      <p className="text-left">
+        <span className="font-bold text-[#333]">Comentário:</span> {data.comment}
       </p>
     </div>
   )
