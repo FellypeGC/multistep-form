@@ -1,5 +1,3 @@
-import "./Steps.css"
-
 import { AiOutlineUser, AiOutlineStar } from "react-icons/ai"
 import { FiSend } from "react-icons/fi"
 
@@ -9,20 +7,21 @@ type stepsProps = {
 
 const Steps = ({ currentStep }: stepsProps) => {
   return (
-    <div className="flex gap-16 justify-center items-center max-w-100 mx-auto relative mb-8 after:content-[''] after:absolute after:top-5 after:left-1/2 after:-translate-x-1/2 after:w-95 after:border-b after:border-[#ccc]">
-      <div className={`flex flex-col justify-center items-center relative text-center bg-white z-10 w-40 p-2 ${currentStep >= 0 ? "font-bold text-[#7076F4]" : ""}`}>
+    <div className="relative mx-auto mb-8 flex items-center justify-between w-full max-w-[320px] after:content-[''] after:absolute after:top-6 after:left-0 after:w-full after:border-b after:border-[#ccc] sm:max-w-120">
+      <div className={`relative z-10 flex flex-col items-center bg-white px-2 py-1 w-20 sm:w-30 ${currentStep >= 0 ? "font-bold text-[#7076F4]" : ""}`}>
         <AiOutlineUser className="text-2xl mb-1" />
-        <p>Identificação</p>
+        <p className="text-xs sm:text-sm">Identificação</p>
       </div>
 
-      <div className={`flex flex-col justify-center items-center relative text-center bg-white z-10 w-40 p-2 ${currentStep >= 1 ? "font-bold text-[#7076F4]" : ""}`}>
+      <div className={`relative z-10 flex flex-col items-center bg-white px-2 py-1 w-20 sm:w-30
+        ${currentStep >= 1 ? "font-bold text-[#7076F4]" : ""}`}>
         <AiOutlineStar className="text-2xl mb-1" />
-        <p>Avaliação</p>
+        <p className="text-xs sm:text-sm">Avaliação</p>
       </div>
 
-      <div className={`flex flex-col justify-center items-center relative text-center bg-white z-10 w-40 p-2 ${currentStep >= 2 ? "font-bold text-[#7076F4]" : ""}`}>
+      <div className={`relative z-10 flex flex-col items-center bg-white px-2 py-1 w-20 sm:w-30 ${currentStep >= 2 ? "font-bold text-[#7076F4]" : ""}`}>
         <FiSend className="text-2xl mb-1" />
-        <p>Envio</p>
+        <p className="text-xs sm:text-sm">Envio</p>
       </div>
     </div>
   )

@@ -52,8 +52,8 @@ function App() {
   return (
     <div className="p-8">
       <div className="text-center mb-8">
-        <h2 className="text-[2rem] mb-8">Deixe sua avaliação</h2>
-        <p>Ficamos felizes com a sua compra. Utilize o formulário abaixo para avaliar o produto</p>
+        <h2 className="text-[2rem] mb-8">Give your feedback</h2>
+        <p>We're happy with your purchase. Please use the form below to evaluate the product</p>
       </div>
       <div className="max-w-150 mx-auto bg-white p-6 shadow-[rgba(100,100,111,0.2)_0_7px_29px_0]">
         <Steps currentStep={currentStep} />
@@ -70,22 +70,23 @@ function App() {
             >
               <GrFormPrevious />
               <span>
-                Voltar
+                Previous
               </span>
             </button>
               {!isLastStep ? (
                 <button 
                   className="flex items-center rounded-[3px] bg-[#dfdfdf] py-2 px-4 gap-2 text-[.9rem] cursor-pointer border-none hover:bg-[#cfcfcf]" type="submit"
                 >
-                  <span>Avançar</span>
+                  <span>Next</span>
                   <GrFormNext />
                 </button>
               ) : (
                 <button
                   className="flex items-center rounded-[3px] bg-[#dfdfdf] py-2 px-4 gap-2 text-[.9rem] cursor-pointer border-none hover:bg-[#cfcfcf]" 
                   type="submit"
+                  onClick={() => alert("Form submitted successfully!")}
                 >
-                  <span>Enviar</span>
+                  <span>Send</span>
                   <FiSend />
                 </button>
               )}

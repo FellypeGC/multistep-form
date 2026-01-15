@@ -1,5 +1,3 @@
-import "./Thanks.css"
-
 import type { ReactElement } from "react";
 
 import {
@@ -17,10 +15,10 @@ type emojiObject = {
 }
 
 const emojiData: emojiObject = {
-  unsatisfied: <BsFillEmojiFrownFill />,
-  neutral: <BsFillEmojiNeutralFill />,
-  satisfied: <BsFillEmojiSmileFill />,
-  very_satisfied: <BsFillEmojiHeartEyesFill />,
+  unsatisfied: <BsFillEmojiFrownFill className="ml-1.25 text-[#333]"  />,
+  neutral: <BsFillEmojiNeutralFill className="ml-1.25 text-[#333]" />,
+  satisfied: <BsFillEmojiSmileFill className="ml-1.25 text-[#333]" />,
+  very_satisfied: <BsFillEmojiHeartEyesFill className="ml-1.25 text-[#333]" />,
 }
 
 type ThanksProps = {
@@ -34,18 +32,18 @@ type ThanksProps = {
 const Thanks = ({ data }: ThanksProps) => {
   return (
     <div className="text-center">
-      <h2 className="mb-4 font-medium">Falta pouco...</h2>
+      <h2 className="mb-4 font-medium">Almost done...</h2>
       <p className="text-[.9rem] mb-2 text-start">
-        A sua opinião é muito importante. Em breve você receberá um cupom de 10% de desconto para a sua próxima compra.
+        Your feedback is very important to us {data.name}. Soon you will receive a coupon via email with a 7% discount coupon for your next purchase!
       </p>
-      <p className="text-[.9rem] mb-2 text-start">Para concluir sua avaliação, por favor, clique no botão de Enviar abaixo.</p>
-      <h3 className="text-left my-4 mx-0">Aqui está o resumo da sua avaliação {data.name}:</h3>
+      <p className="text-[.9rem] mb-2 text-start">To complete your evaluation, please click the Send button below.</p>
+      <h3 className="text-left my-4 mx-0">Here is the summary of your evaluation {data.name}:</h3>
       <p className="text-left flex items-center font-bold">
-        <span className="font-bold text-[#333]">Satisfação com o produto:</span> {emojiData[data.review as keyof typeof emojiData]}
+        <span className="font-bold text-[#333]">Satisfaction with the product:</span> {emojiData[data.review as keyof typeof emojiData]}
       </p>
 
       <p className="text-left">
-        <span className="font-bold text-[#333]">Comentário:</span> {data.comment}
+        <span className="font-bold text-[#333]">Comment:</span> {data.comment}
       </p>
     </div>
   )
