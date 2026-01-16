@@ -30,8 +30,7 @@ type ThanksProps = {
 }
 
 const Thanks = ({ data }: ThanksProps) => {
-  let discount: number = Math.floor(Math.random() * 20 + 1);
-
+  let discount: number = Math.floor(Math.random() * 20 + 1); // Generates a random discount between 1% and 20% 
   return (
     <div className="text-center">
       <h2 className="mb-4 font-medium">Almost done...</h2>

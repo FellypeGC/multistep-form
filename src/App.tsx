@@ -32,7 +32,7 @@ function App() {
 
   const updateFieldHandler = (key: string, value: string) => {
     setData((prev): FormFields => {
-      return { ...prev, [key]: value };
+      return { ...prev, [key]: value }; // dynamically updates the field based on key
     });
   };
 
